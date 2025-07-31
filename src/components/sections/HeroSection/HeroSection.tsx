@@ -67,7 +67,8 @@ const HeroSection = () => {
                         marginBottom: '40px',
                         lineHeight: '1.6',
                         maxWidth: '500px',
-                        margin: '0 auto 40px'
+                        margin: '0 auto 40px',
+                        fontWeight: 'bold'
                     }}
                 >
                     I'm passionate about building scalable, business-driven software solutions

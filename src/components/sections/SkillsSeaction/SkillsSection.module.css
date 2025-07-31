@@ -21,3 +21,87 @@
     transform: translateY(0);
   }
 }
+
+.skillHeader {
+  margin-bottom: 32px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.skillAvatar {
+  flex-shrink: 0;
+}
+
+.skillInfo {
+  flex: 1;
+}
+
+.skillButtonGroup {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.techTagsContainer {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .skillButton {
+    font-size: 13px;
+    height: 32px;
+    padding: 0 12px;
+    margin: 2px;
+  }
+
+  .skillHeader {
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+
+  .skillButtonGroup {
+    gap: 4px;
+    margin-bottom: 24px;
+  }
+
+  .techTagsContainer {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillButton {
+    font-size: 12px;
+    height: 28px;
+    padding: 0 10px;
+    margin: 1px;
+    border-radius: 14px;
+  }
+
+  .skillHeader {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .skillInfo {
+    text-align: center;
+    width: 100%;
+  }
+
+  .skillButtonGroup {
+    gap: 2px;
+    margin-bottom: 20px;
+  }
+
+  .techTagsContainer {
+    gap: 4px;
+    justify-content: center;
+  }
+}

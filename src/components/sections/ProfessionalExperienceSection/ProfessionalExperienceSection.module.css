@@ -33,3 +33,173 @@
   font-size: 24px;
   color: #800020;
 }
+
+.experienceCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 0 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  min-height: 500px;
+}
+
+.cardHeader {
+  margin-bottom: 32px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cardContent {
+  margin-bottom: 24px;
+}
+
+.achievementsList {
+  width: 100%;
+}
+
+.achievementItem {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  color: #555;
+  padding-left: 16px;
+  position: relative;
+}
+
+.achievementBullet {
+  position: absolute;
+  left: 0;
+  color: #800020;
+  font-weight: bold;
+}
+
+.techTag {
+  font-size: 12px;
+  padding: 4px 8px;
+  background-color: #f8f9ff;
+  border: 1px solid #d6e4ff;
+  color: #1890ff;
+  margin-bottom: 4px;
+}
+
+.periodTag {
+  font-size: 13px;
+  padding: 4px 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .customCarousel .slick-prev,
+  .customCarousel .slick-next {
+    width: 32px;
+    height: 32px;
+  }
+
+  .customCarousel .slick-prev {
+    left: 5px;
+  }
+
+  .customCarousel .slick-next {
+    right: 5px;
+  }
+
+  .customCarousel .slick-prev:before,
+  .customCarousel .slick-next:before {
+    font-size: 18px;
+  }
+
+  .customCarousel .slick-dots {
+    bottom: -32px;
+  }
+
+  .customCarousel .slick-dots li button {
+    width: 10px;
+    height: 10px;
+  }
+
+  .experienceCard {
+    padding: 24px;
+    margin: 0 4px;
+    min-height: 450px;
+  }
+
+  .cardHeader {
+    margin-bottom: 24px;
+  }
+
+  .cardContent {
+    margin-bottom: 20px;
+  }
+
+  .achievementItem {
+    font-size: 14px;
+  }
+
+  .techTag {
+    font-size: 11px;
+  }
+
+  .periodTag {
+    font-size: 12px;
+    padding: 3px 8px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .customCarousel .slick-prev,
+  .customCarousel .slick-next {
+    display: none !important;
+  }
+
+  .customCarousel .slick-dots {
+    bottom: -24px;
+  }
+
+  .customCarousel .slick-dots li button {
+    width: 8px;
+    height: 8px;
+  }
+
+  .experienceCard {
+    padding: 16px;
+    margin: 0 2px;
+    min-height: 400px;
+  }
+
+  .cardHeader {
+    margin-bottom: 16px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .cardContent {
+    margin-bottom: 16px;
+  }
+
+  .achievementItem {
+    font-size: 13px;
+  }
+
+  .techTag {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .periodTag {
+    font-size: 11px;
+    padding: 2px 6px;
+    max-width: 150px;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2;
+  }
+}

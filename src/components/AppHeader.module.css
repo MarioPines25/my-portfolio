@@ -1,0 +1,189 @@
+.header {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 24px;
+  height: 64px;
+}
+
+.logoSection {
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  flex-shrink: 0;
+}
+
+.nameTitle {
+  color: #800020;
+  margin: 0;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jobTitle {
+  color: #2c2c2c;
+  margin: 0;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menuContainer {
+  flex-shrink: 0;
+}
+
+.menu {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #800020;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.hamburger:hover {
+  background-color: rgba(128, 0, 32, 0.1);
+}
+
+.mobileMenuOverlay {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.mobileMenuContent {
+  background-color: #f8f9fa;
+  padding: 16px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMenuItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 24px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c2c2c;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mobileMenuItem:hover,
+.mobileMenuItem.active {
+  background-color: rgba(128, 0, 32, 0.1);
+  color: #800020;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .logoSection {
+    gap: 8px;
+  }
+
+  .nameTitle {
+    font-size: 16px;
+  }
+
+  .jobTitle {
+    font-size: 14px;
+  }
+
+  .menu .ant-menu-item {
+    padding: 0 12px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .header {
+    padding: 0 12px;
+    height: 56px;
+  }
+
+  .logoSection {
+    gap: 6px;
+  }
+
+  .nameTitle {
+    font-size: 14px;
+  }
+
+  .jobTitle {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobileMenuOverlay {
+    top: 56px;
+  }
+}
+
+/* Very small mobile */
+@media (max-width: 480px) {
+  .header {
+    padding: 0 8px;
+  }
+
+  .logoSection {
+    gap: 4px;
+  }
+
+  .nameTitle {
+    font-size: 13px;
+    max-width: 120px;
+  }
+
+  .avatar {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .nameTitle {
+    font-size: 12px;
+    max-width: 100px;
+  }
+}

@@ -17,16 +17,12 @@ const { Title, Paragraph } = Typography;
 const ProfessionalExperienceSection = () => {
     const createCarouselItem = (logoSrc: string, title: string, company: string, period: string, achievements: string[], techStack: string[]) => {
         return (
-            <div style={{
-                backgroundColor: '#ffffff',
-                borderRadius: '12px',
-                padding: '32px',
-                margin: '0 8px',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
-                border: '1px solid #f0f0f0',
-                minHeight: '500px'
-            }}>
-                <Flex align="center" gap="large" style={{ marginBottom: '32px' }}>
+            <div className={styles.experienceCard}>
+                <Flex 
+                    align="center" 
+                    gap="large" 
+                    className={styles.cardHeader}
+                >
                     <Avatar
                         size={72}
                         src={logoSrc}
@@ -37,11 +33,11 @@ const ProfessionalExperienceSection = () => {
                             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
                         }}
                     />
-                    <div style={{ flex: 1 }}>
+                    <div style={{ flex: 1, width: '100%' }}>
                         <Title level={3} style={{
                             margin: '0 0 4px 0',
                             color: colors.primary,
-                            fontSize: '22px',
+                            fontSize: 'clamp(18px, 4vw, 22px)',
                             fontWeight: '600'
                         }}>
                             {title}
@@ -49,47 +45,32 @@ const ProfessionalExperienceSection = () => {
                         <Title level={4} style={{
                             margin: '0 0 8px 0',
                             color: '#666',
-                            fontSize: '18px',
+                            fontSize: 'clamp(16px, 3.5vw, 18px)',
                             fontWeight: '500'
                         }}>
                             {company}
                         </Title>
-                        <Tag color="blue" style={{
-                            fontSize: '13px',
-                            padding: '4px 12px',
-                            fontWeight: '500'
-                        }}>
+                        <Tag color="blue" className={styles.periodTag}>
                             {period}
                         </Tag>
                     </div>
                 </Flex>
 
-                <div style={{ marginBottom: '24px' }}>
+                <div className={styles.cardContent}>
                     <Title level={5} style={{
                         color: colors.primary,
-                        marginBottom: '16px',
-                        fontSize: '18px',
+                        marginBottom: 'clamp(12px, 3vw, 16px)',
+                        fontSize: 'clamp(16px, 3.5vw, 18px)',
                         fontWeight: '600'
                     }}>
                         Key Achievements:
                     </Title>
-                    <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+                    <Space direction="vertical" size="middle" className={styles.achievementsList}>
                         {achievements.map((achievement, index) => (
-                            <Paragraph key={index} style={{
-                                ...paragraphStyle,
-                                fontSize: '15px',
-                                lineHeight: '1.6',
-                                margin: 0,
-                                color: '#555',
-                                paddingLeft: '16px',
-                                position: 'relative'
+                            <Paragraph key={index} className={styles.achievementItem} style={{
+                                ...paragraphStyle
                             }}>
-                                <span style={{
-                                    position: 'absolute',
-                                    left: '0',
-                                    color: colors.primary,
-                                    fontWeight: 'bold'
-                                }}>•</span>
+                                <span className={styles.achievementBullet}>•</span>
                                 {achievement}
                             </Paragraph>
                         ))}
@@ -99,21 +80,15 @@ const ProfessionalExperienceSection = () => {
                 <div>
                     <Title level={5} style={{
                         color: colors.primary,
-                        marginBottom: '12px',
-                        fontSize: '18px',
+                        marginBottom: 'clamp(8px, 2vw, 12px)',
+                        fontSize: 'clamp(16px, 3.5vw, 18px)',
                         fontWeight: '600'
                     }}>
                         Technology Stack:
                     </Title>
                     <Space wrap size="small">
                         {techStack.map((tech, index) => (
-                            <Tag key={index} style={{
-                                fontSize: '12px',
-                                padding: '4px 8px',
-                                backgroundColor: '#f8f9ff',
-                                border: '1px solid #d6e4ff',
-                                color: '#1890ff'
-                            }}>
+                            <Tag key={index} className={styles.techTag}>
                                 {tech}
                             </Tag>
                         ))}
@@ -124,12 +99,14 @@ const ProfessionalExperienceSection = () => {
     };
 
     return (
-        <section id="experience" style={{ padding: '60px 0' }}>
-            <Divider style={{ backgroundColor: colors.primary, margin: '0 0 48px 0' }} />
+        <section id="experience" style={{ padding: 'clamp(32px, 8vw, 60px) 0' }}>
+            <Divider style={{ backgroundColor: colors.primary, margin: '0 0 clamp(24px, 6vw, 48px) 0' }} />
             <Title level={2} style={{
                 ...sectionTitleStyle,
                 textAlign: 'center',
-                marginBottom: '16px'
+                marginBottom: 'clamp(12px, 3vw, 16px)',
+                fontSize: 'clamp(24px, 6vw, 36px)',
+                padding: '0 16px'
             }}>
                 Professional Experience
             </Title>
@@ -137,10 +114,11 @@ const ProfessionalExperienceSection = () => {
                 ...paragraphStyle,
                 textAlign: 'center',
                 maxWidth: '800px',
-                margin: '0 auto 48px auto',
-                fontSize: '16px',
+                margin: '0 auto clamp(24px, 6vw, 48px) auto',
+                fontSize: 'clamp(14px, 3.5vw, 16px)',
                 lineHeight: '1.6',
-                color: '#666666'
+                color: '#666666',
+                padding: '0 16px'
             }}>
                 A progressive journey through innovative technologies and leadership roles, from blockchain solutions
                 to AI-powered applications, consistently delivering scalable enterprise solutions.
@@ -149,7 +127,7 @@ const ProfessionalExperienceSection = () => {
             <div style={{
                 margin: '0 auto',
                 maxWidth: '1200px',
-                padding: '0 24px'
+                padding: '0 clamp(12px, 3vw, 24px)'
             }}>
                 <Carousel
                     arrows={true}
@@ -209,11 +187,13 @@ const ProfessionalExperienceSection = () => {
             <Paragraph style={{
                 ...paragraphStyle,
                 textAlign: 'center',
-                marginTop: '48px',
+                marginTop: 'clamp(24px, 6vw, 48px)',
                 fontStyle: 'italic',
                 color: '#888888',
                 maxWidth: '700px',
-                margin: '48px auto 0 auto'
+                margin: 'clamp(24px, 6vw, 48px) auto 0 auto',
+                fontSize: 'clamp(13px, 3vw, 16px)',
+                padding: '0 16px'
             }}>
                 Each role has shaped my expertise in both technical execution and strategic leadership,
                 building a foundation for delivering innovative solutions in rapidly evolving technology landscapes.

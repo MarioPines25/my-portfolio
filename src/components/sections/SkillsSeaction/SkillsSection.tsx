@@ -56,7 +56,7 @@ const SkillsSection = () => {
             title: 'Infrastructure & DevOps',
             description: 'Cloud-native solutions, containerization, and scalable database management',
             technologies: [
-                'Relational Databases (PostgreSQL, MySQL)',
+                'SQL (PostgreSQL, MySQL)',
                 'No-SQL Databases (MongoDB)',
                 'Azure Cloud',
                 'Kubernetes',
@@ -128,33 +128,40 @@ const SkillsSection = () => {
             <Card 
                 className={styles.skillContent}
                 style={{
-                    marginTop: '32px',
+                    marginTop: 'clamp(20px, 4vw, 32px)',
                     borderRadius: '12px',
                     border: `1px solid ${colors.lightGray}`,
                     boxShadow: '0 4px 12px rgba(128, 0, 32, 0.08)'
                 }}
-                styles={{ body: { padding: '32px' } }}
+                styles={{ body: { padding: 'clamp(16px, 4vw, 32px)' } }}
             >
-                <Flex align="flex-start" gap="large" style={{ marginBottom: '32px' }}>
+                <Flex 
+                    align="flex-start" 
+                    gap="large" 
+                    className={styles.skillHeader}
+                >
                     <Avatar
                         size={56}
+                        className={styles.skillAvatar}
                         style={{
                             backgroundColor: skill.accentColor,
-                            fontSize: '24px',
+                            fontSize: 'clamp(18px, 4vw, 24px)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             flexShrink: 0,
-                            boxShadow: `0 2px 8px ${skill.accentColor}40`
+                            boxShadow: `0 2px 8px ${skill.accentColor}40`,
+                            width: 'clamp(48px, 12vw, 56px)',
+                            height: 'clamp(48px, 12vw, 56px)'
                         }}
                     >
                         {skill.icon}
                     </Avatar>
-                    <div style={{ flex: 1 }}>
+                    <div className={styles.skillInfo}>
                         <Title level={3} style={{
                             margin: '0 0 8px 0',
                             color: colors.primary,
-                            fontSize: '22px',
+                            fontSize: 'clamp(18px, 4.5vw, 22px)',
                             fontWeight: '600',
                             lineHeight: '1.3'
                         }}>
@@ -163,7 +170,7 @@ const SkillsSection = () => {
                         <Paragraph style={{
                             ...paragraphStyle,
                             margin: 0,
-                            fontSize: '15px',
+                            fontSize: 'clamp(14px, 3.5vw, 15px)',
                             color: colors.gray,
                             lineHeight: '1.5'
                         }}>
@@ -172,17 +179,18 @@ const SkillsSection = () => {
                     </div>
                 </Flex>
 
-                <Flex wrap="wrap" gap="small">
+                <Flex className={styles.techTagsContainer}>
                     {skill.technologies.map((tech, index) => (
                         <Tag
                             key={index}
                             color={skill.accentColor}
                             style={{
-                                fontSize: '13px',
-                                padding: '6px 12px',
+                                fontSize: 'clamp(11px, 2.8vw, 13px)',
+                                padding: 'clamp(4px, 1.5vw, 6px) clamp(8px, 2.5vw, 12px)',
                                 borderRadius: '16px',
                                 border: 'none',
-                                fontWeight: '500'
+                                fontWeight: '500',
+                                marginBottom: '4px'
                             }}
                         >
                             {tech}
@@ -194,12 +202,14 @@ const SkillsSection = () => {
     };
 
     return (
-        <section id="skills" style={{ padding: '60px 0' }}>
-            <Divider style={{ backgroundColor: colors.primary, margin: '0 0 48px 0' }} />
+        <section id="skills" style={{ padding: 'clamp(32px, 8vw, 60px) 0' }}>
+            <Divider style={{ backgroundColor: colors.primary, margin: '0 0 clamp(24px, 6vw, 48px) 0' }} />
             <Title level={2} style={{
                 ...sectionTitleStyle,
                 textAlign: 'center',
-                marginBottom: '16px'
+                marginBottom: 'clamp(12px, 3vw, 16px)',
+                fontSize: 'clamp(24px, 6vw, 36px)',
+                padding: '0 16px'
             }}>
                 Technical Expertise
             </Title>
@@ -207,10 +217,11 @@ const SkillsSection = () => {
                 ...paragraphStyle,
                 textAlign: 'center',
                 maxWidth: '800px',
-                margin: '0 auto 48px auto',
-                fontSize: '16px',
+                margin: '0 auto clamp(24px, 6vw, 48px) auto',
+                fontSize: 'clamp(14px, 3.5vw, 16px)',
                 lineHeight: '1.6',
-                color: colors.gray
+                color: colors.gray,
+                padding: '0 16px'
             }}>
                 Comprehensive expertise across the full technology stack, from frontend interfaces to backend architecture,
                 cloud infrastructure, and emerging technologies. Proven experience delivering scalable solutions in
@@ -220,10 +231,10 @@ const SkillsSection = () => {
             <div style={{
                 margin: '0 auto',
                 maxWidth: '1200px',
-                padding: '0 24px'
+                padding: '0 clamp(12px, 3vw, 24px)'
             }}>
                 {/* Navigation buttons */}
-                <Flex justify="center" wrap="wrap" gap="small" style={{ marginBottom: '32px' }}>
+                <Flex className={styles.skillButtonGroup}>
                     {Object.entries(buttonLabels).map(([key, label]) => (
                         <Button
                             key={key}
@@ -231,11 +242,12 @@ const SkillsSection = () => {
                             onClick={() => setActiveSkill(key as SkillKey)}
                             className={styles.skillButton}
                             style={{
-                                borderRadius: '20px',
+                                borderRadius: 'clamp(14px, 4vw, 20px)',
                                 fontWeight: '500',
-                                height: '36px',
-                                paddingLeft: '16px',
-                                paddingRight: '16px',
+                                height: 'clamp(28px, 8vw, 36px)',
+                                paddingLeft: 'clamp(10px, 3vw, 16px)',
+                                paddingRight: 'clamp(10px, 3vw, 16px)',
+                                fontSize: 'clamp(12px, 3vw, 14px)',
                                 backgroundColor: activeSkill === key ? colors.primary : '#ffffff',
                                 borderColor: activeSkill === key ? colors.primary : colors.lightGray,
                                 color: activeSkill === key ? '#ffffff' : colors.primary,
@@ -254,11 +266,13 @@ const SkillsSection = () => {
             <Paragraph style={{
                 ...paragraphStyle,
                 textAlign: 'center',
-                marginTop: '48px',
+                marginTop: 'clamp(24px, 6vw, 48px)',
                 fontStyle: 'italic',
                 color: colors.muted,
                 maxWidth: '600px',
-                margin: '48px auto 0 auto'
+                margin: 'clamp(24px, 6vw, 48px) auto 0 auto',
+                fontSize: 'clamp(13px, 3vw, 16px)',
+                padding: '0 16px'
             }}>
                 Committed to continuous learning and staying current with emerging technologies
                 while leveraging proven, enterprise-grade solutions.

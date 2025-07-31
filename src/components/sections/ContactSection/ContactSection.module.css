@@ -1,0 +1,140 @@
+.contactSection {
+  padding: 60px 0;
+}
+
+.contactContainer {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+.contactFlex {
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contactCard {
+  flex: 1;
+  min-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.formItem {
+  margin-bottom: 20px;
+}
+
+.inputField {
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.submitButton {
+  border-radius: 8px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.sectionDescription {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 0 16px;
+}
+
+.closingText {
+  margin-top: 32px;
+  text-align: center;
+  font-style: italic;
+  padding: 0 16px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 40px 0;
+  }
+
+  .contactContainer {
+    padding: 0 16px;
+  }
+
+  .contactFlex {
+    gap: 16px;
+  }
+
+  .contactCard {
+    min-width: 100%;
+    margin: 0;
+  }
+
+  .formItem {
+    margin-bottom: 16px;
+  }
+
+  .inputField {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .submitButton {
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .sectionDescription {
+    margin-bottom: 24px;
+  }
+
+  .closingText {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 32px 0;
+  }
+
+  .contactContainer {
+    padding: 0 12px;
+  }
+
+  .contactCard {
+    min-width: 100%;
+    border-radius: 8px;
+  }
+
+  .formItem {
+    margin-bottom: 14px;
+  }
+
+  .inputField {
+    padding: 8px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  .submitButton {
+    height: 36px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .sectionDescription {
+    margin-bottom: 20px;
+  }
+
+  .closingText {
+    margin-top: 20px;
+  }
+}
