@@ -155,7 +155,7 @@ const ProfessionalExperienceSection = () => {
                     arrows={true}
                     dots={true}
                     autoplay
-                    autoplaySpeed={5000}
+                    autoplaySpeed={15000}
                     dotPosition="bottom"
                     className={styles.customCarousel}
                 >
