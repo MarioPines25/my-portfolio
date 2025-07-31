@@ -1,0 +1,3 @@
+.customCarousel :global(.slick-arrow) {
+  color: #800020 !important;
+}

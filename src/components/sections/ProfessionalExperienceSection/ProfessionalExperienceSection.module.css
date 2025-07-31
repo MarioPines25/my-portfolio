@@ -1,0 +1,35 @@
+.customCarousel .slick-dots {
+  bottom: -40px;
+}
+
+.customCarousel .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.customCarousel :global(.slick-arrow) {
+  color: #800020 !important;
+}
+
+.customCarousel .slick-prev,
+.customCarousel .slick-next {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+}
+
+.customCarousel .slick-prev {
+  left: 10px;
+}
+
+.customCarousel .slick-next {
+  right: 10px;
+}
+
+.customCarousel .slick-prev:before,
+.customCarousel .slick-next:before {
+  font-size: 24px;
+  color: #800020;
+}
