@@ -88,7 +88,7 @@ const HeroSection = () => {
                         icon={<DownloadOutlined />}
                         onClick={() => {
                             const link = document.createElement('a');
-                            link.href = '/Mario_Pines_Madrid_CV.pdf';
+                            link.href = '/my-portfolio/Mario_Pines_Madrid_CV.pdf';
                             link.download = 'Mario_Pines_Madrid_CV.pdf';
                             link.click();
                         }}

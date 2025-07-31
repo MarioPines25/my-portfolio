@@ -14,7 +14,7 @@ const AppLayout = () => {
     const { message } = App.useApp();
     const downloadCV = () => {
         const link = document.createElement('a');
-        link.href = '/Mario_Pines_Madrid_CV.pdf';
+        link.href = '/my-portfolio/Mario_Pines_Madrid_CV.pdf';
         link.download = 'Mario_Pines_Madrid_CV.pdf';
         link.click();
         message.success('CV downloaded successfully!');

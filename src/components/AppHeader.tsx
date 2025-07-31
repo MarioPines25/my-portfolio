@@ -83,7 +83,7 @@ const AppHeader = () => {
       <Space size="middle" style={{ alignItems: 'center' }}>
         <Avatar
           size={40}
-          src="/mario_pines.jpeg"
+          src="/my-portfolio/mario_pines.jpeg"
           alt="Mario Pinés Madrid"
         />
         <Title level={4} style={{

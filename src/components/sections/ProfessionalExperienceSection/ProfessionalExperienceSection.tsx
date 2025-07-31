@@ -160,7 +160,7 @@ const ProfessionalExperienceSection = () => {
                     className={styles.customCarousel}
                 >
                     {createCarouselItem(
-                        '/stealth.jpeg',
+                        '/my-portfolio/stealth.jpeg',
                         'Software Engineer',
                         'Stealth Mode Startup',
                         'Apr 2025 - Present · 4+ months',
@@ -175,7 +175,7 @@ const ProfessionalExperienceSection = () => {
                     )}
 
                     {createCarouselItem(
-                        '/nexplore-logo.jpeg',
+                        '/my-portfolio/nexplore-logo.jpeg',
                         'Software Engineer',
                         'NEXPLORE (ACS Group)',
                         'Feb 2022 - Apr 2025 · 3 years 3 months',
@@ -190,7 +190,7 @@ const ProfessionalExperienceSection = () => {
                     )}
 
                     {createCarouselItem(
-                        '/clluc-logo.jpeg',
+                        '/my-portfolio/clluc-logo.jpeg',
                         'Blockchain Developer',
                         'Clluc · Madrid, Spain',
                         'Oct 2019 - Feb 2022 · 2 years 5 months',
