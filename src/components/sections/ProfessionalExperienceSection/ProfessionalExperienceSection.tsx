@@ -1,3 +1,8 @@
+import {
+    colors,
+    paragraphStyle,
+    sectionTitleStyle
+} from '@/styles/shared';
 import Avatar from 'antd/es/avatar';
 import Carousel from 'antd/es/carousel';
 import Divider from 'antd/es/divider';
@@ -5,11 +10,6 @@ import Flex from 'antd/es/flex';
 import Space from 'antd/es/space';
 import Tag from 'antd/es/tag';
 import Typography from 'antd/es/typography';
-import {
-    colors,
-    paragraphStyle,
-    sectionTitleStyle
-} from '@/styles/shared';
 import styles from './ProfessionalExperienceSection.module.css';
 
 const { Title, Paragraph } = Typography;
@@ -18,9 +18,9 @@ const ProfessionalExperienceSection = () => {
     const createCarouselItem = (logoSrc: string, title: string, company: string, period: string, achievements: string[], techStack: string[]) => {
         return (
             <div className={styles.experienceCard}>
-                <Flex 
-                    align="center" 
-                    gap="large" 
+                <Flex
+                    align="center"
+                    gap="large"
                     className={styles.cardHeader}
                 >
                     <Avatar
@@ -131,7 +131,7 @@ const ProfessionalExperienceSection = () => {
             }}>
                 <Carousel
                     arrows={true}
-                    dots={true}
+                    // dots={true}
                     autoplay
                     autoplaySpeed={15000}
                     dotPosition="bottom"

@@ -1,3 +1,16 @@
+import {
+    colors,
+    paragraphStyle,
+    sectionTitleStyle
+} from '@/styles/shared';
+import {
+    BlockOutlined,
+    CodeOutlined,
+    DatabaseOutlined,
+    SettingOutlined,
+    TeamOutlined,
+    ToolOutlined
+} from '@ant-design/icons';
 import Avatar from 'antd/es/avatar';
 import Button from 'antd/es/button';
 import Card from 'antd/es/card';
@@ -6,11 +19,6 @@ import Flex from 'antd/es/flex';
 import Tag from 'antd/es/tag';
 import Typography from 'antd/es/typography';
 import { useState } from 'react';
-import {
-    colors,
-    paragraphStyle,
-    sectionTitleStyle
-} from '@/styles/shared';
 import styles from './SkillsSection.module.css';
 
 const { Title, Paragraph } = Typography;
@@ -22,7 +30,7 @@ const SkillsSection = () => {
 
     const skillsData = {
         frontend: {
-            icon: '💻',
+            icon: <CodeOutlined />,
             title: 'Frontend Development',
             description: 'Modern, responsive web applications with focus on user experience and performance optimization',
             technologies: [
@@ -37,7 +45,7 @@ const SkillsSection = () => {
             accentColor: '#800020'
         },
         backend: {
-            icon: '⚙️',
+            icon: <SettingOutlined />,
             title: 'Backend Development',
             description: 'Enterprise-grade server architecture, API design and implementation',
             technologies: [
@@ -52,7 +60,7 @@ const SkillsSection = () => {
             accentColor: '#6b1a52'
         },
         infrastructure: {
-            icon: '🗄️',
+            icon: <DatabaseOutlined />,
             title: 'Infrastructure & DevOps',
             description: 'Cloud-native solutions, containerization, and scalable database management',
             technologies: [
@@ -67,7 +75,7 @@ const SkillsSection = () => {
             accentColor: '#a0522d'
         },
         blockchain: {
-            icon: '⛓️',
+            icon: <BlockOutlined />,
             title: 'Blockchain & Web3',
             description: 'Decentralized application development and smart contract architecture',
             technologies: [
@@ -80,7 +88,7 @@ const SkillsSection = () => {
             accentColor: '#4b0e2e'
         },
         practices: {
-            icon: '🛠️',
+            icon: <ToolOutlined />,
             title: 'Development Practices',
             description: 'Quality assurance, automation, and industry-standard development methodologies',
             technologies: [
@@ -97,7 +105,7 @@ const SkillsSection = () => {
             accentColor: '#b8002c'
         },
         leadership: {
-            icon: '👨‍💼',
+            icon: <TeamOutlined />,
             title: 'Leadership & Strategy',
             description: 'Technical leadership, process optimization, and cross-platform development expertise',
             technologies: [
@@ -125,7 +133,7 @@ const SkillsSection = () => {
 
     const createSkillContent = (skill: typeof currentSkill) => {
         return (
-            <Card 
+            <Card
                 className={styles.skillContent}
                 style={{
                     marginTop: 'clamp(20px, 4vw, 32px)',
@@ -135,9 +143,9 @@ const SkillsSection = () => {
                 }}
                 styles={{ body: { padding: 'clamp(16px, 4vw, 32px)' } }}
             >
-                <Flex 
-                    align="flex-start" 
-                    gap="large" 
+                <Flex
+                    align="flex-start"
+                    gap="large"
                     className={styles.skillHeader}
                 >
                     <Avatar
