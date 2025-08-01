@@ -8,35 +8,34 @@
   padding: 0 24px;
 }
 
-.contactFlex {
-  align-items: flex-start;
-  gap: 24px;
-  flex-wrap: wrap;
+.contactLinks {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.contactCard {
-  flex: 1;
-  min-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.contactItem {
+  text-align: center;
+  padding: 24px;
+  min-width: 280px;
 }
 
-.formItem {
-  margin-bottom: 20px;
+.contactLink {
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
 }
 
-.inputField {
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 14px;
+.contactLink:hover {
+  color: #800020 !important;
+  border-bottom-color: #800020;
+  transform: translateY(-1px);
 }
 
-.submitButton {
-  border-radius: 8px;
-  height: 44px;
-  font-size: 16px;
-  font-weight: bold;
-  width: 100%;
+.contactDivider {
+  width: 1px;
+  height: 60px;
+  background-color: #e8e8e8;
+  margin: 0 16px;
 }
 
 .sectionTitle {
@@ -68,27 +67,21 @@
     padding: 0 16px;
   }
 
-  .contactFlex {
-    gap: 16px;
+  .contactLinks {
+    flex-direction: column;
+    gap: 0 !important;
   }
 
-  .contactCard {
-    min-width: 100%;
-    margin: 0;
+  .contactItem {
+    padding: 20px 16px;
+    min-width: auto;
   }
 
-  .formItem {
-    margin-bottom: 16px;
-  }
-
-  .inputField {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-
-  .submitButton {
-    height: 40px;
-    font-size: 15px;
+  .contactDivider {
+    width: 60px;
+    height: 1px;
+    margin: 8px 0;
+    align-self: center;
   }
 
   .sectionDescription {
@@ -109,25 +102,13 @@
     padding: 0 12px;
   }
 
-  .contactCard {
-    min-width: 100%;
-    border-radius: 8px;
+  .contactItem {
+    padding: 16px 12px;
   }
 
-  .formItem {
-    margin-bottom: 14px;
-  }
-
-  .inputField {
-    padding: 8px 10px;
-    font-size: 13px;
-    border-radius: 6px;
-  }
-
-  .submitButton {
-    height: 36px;
-    font-size: 14px;
-    border-radius: 6px;
+  .contactDivider {
+    width: 40px;
+    margin: 4px 0;
   }
 
   .sectionDescription {
